@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bashmastore.R
+import com.example.bashmastore.data.AuthViewModel
 import com.example.bashmastore.navigation.ROUT_SIGNUP
 import com.example.bashmastore.navigation.ROUT_SPLASH
 import com.example.bashmastore.ui.theme.screens.splash.SplashScreen
@@ -119,9 +120,10 @@ fun LoginScreen(navController: NavController){
         )
 
         Spacer(modifier = Modifier.height(30.dp))
+        val context = LocalContext.current
+        val authViewModel = AuthViewModel(navController, context)
 
-
-        Button(onClick = {  },
+        Button(onClick = {  authViewModel.login(email, password)  },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 20.dp)

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880502420704",
+    "project_id": "bashma-store-4b9a8",
+    "storage_bucket": "bashma-store-4b9a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880502420704:android:9b794b70ac5932bd0c8c85",
+        "android_client_info": {
+          "package_name": "com.example.bashmastore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIGQUWWJ4wV0zYvdu0yegQRd1LqAB1w64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

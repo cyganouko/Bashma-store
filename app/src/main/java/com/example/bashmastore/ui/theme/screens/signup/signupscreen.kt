@@ -43,8 +43,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.bashmastore.R
+import com.example.bashmastore.data.AuthViewModel
 import com.example.bashmastore.navigation.ROUT_LOGIN
 import com.example.bashmastore.ui.theme.screens.login.LoginScreen
+
 
 @Composable
 fun SignupScreen(navController: NavController){
@@ -134,10 +136,11 @@ fun SignupScreen(navController: NavController){
 
         )
         Spacer(modifier = Modifier.height(30.dp))
-
+        val context = LocalContext.current
+        val authViewModel = AuthViewModel(navController, context)
 
         Button(onClick = {
-
+            authViewModel.signup(name, email, password,confpassword)
         },
             modifier = Modifier
                 .fillMaxWidth()
